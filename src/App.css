@@ -40,3 +40,36 @@
 .read-the-docs {
   color: #888;
 }
+
+/* my CSS */
+
+nav a.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header,
+.app-footer {
+  padding: 16px;
+}
+
+.app-main {
+  flex: 1;
+  padding: 16px;
+}
+
+.app-main> * {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.nav {
+  display: flex;
+  gap: 18px;
+}

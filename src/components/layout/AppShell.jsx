@@ -1,25 +1,21 @@
-// [Header]
-// [Page content (changes per route)]
-// [Footer]
-
 import Header from "./Header";
 import Footer from "./Footer";
 import { Outlet } from "react-router-dom";
 
 export default function AppShell() {
   return (
-    <>
-      <div className="header">
+    <div className="app-shell">
+      <header className="app-header">
         <Header />
-      </div>
+      </header>
 
-      <div className="page-content">
+      <main className="app-main">
         <Outlet />
-      </div>
+      </main>
 
-      <div className="footer">
+      <footer className="app-footer">
         <Footer />
-      </div>
-    </>
+      </footer>
+    </div>
   );
 }
