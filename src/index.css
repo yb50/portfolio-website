@@ -1,68 +1,113 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  /* Typography */
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.55;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* Theme */
+  color-scheme: light;
+  --bg: #fafafc;
+  --surface: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  color: var(--text);
+  background-color: var(--bg);
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+* {
+  box-sizing: border-box;
 }
 
+html,
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
+  min-height: 100%;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Links */
+a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+/* Headings */
+h1,
+h2,
+h3 {
+  margin: 0 0 0.6rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 2rem;
 }
 
+h2 {
+  font-size: 1.35rem;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+/* Buttons */
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  padding: 0.55rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background: var(--surface);
+  color: var(--text);
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+button:hover {
+  border-color: #cbd5e1;
+}
+
+button:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.25);
+  outline-offset: 2px;
+}
+
+/* CTA button */
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+/* Lists */
+ul {
+  margin: 0 0 1rem;
+  padding-left: 1.2rem;
+}
+
+li {
+  margin: 0.25rem 0;
 }

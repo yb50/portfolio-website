@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer>
-      <p>© 2026 Your Name · Built with React</p>
+      <p>© 2026 Yusuf Bakay</p>
       
       
       {/* Github and LinkedIn icons */}
